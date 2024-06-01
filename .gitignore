@@ -1,0 +1,9 @@
+.cache
+.vscode
+venv
+__pycache__
+build
+tests_output
+bin
+binaries
+accuracy_plot.png
