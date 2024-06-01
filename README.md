@@ -38,4 +38,4 @@ make coverage
 ```
 python3 stats/validator.py
 ```
-#### Plot file will be named as ```accuracy_plot.png``` in main project directory. 
+#### Plot file will be named as ```accuracy_plot.png``` in ```stats``` directory. 
