@@ -11,7 +11,7 @@ def draw_plot(stats):
         values.append(y)
 
     fig = px.histogram(x=labels, y=values, text_auto=True,
-                       title="Solver accuracy on tests",
-                       labels={'x': "tests_group"})
-    fig.update_layout(yaxis_title="accuracy")
-    fig.write_image('accuracy_plot.png')
+                       title="Примерная точность на типах графов",
+                       labels={'x': "Типы графов"})
+    fig.update_layout(yaxis_title="Точность")
+    fig.write_image('stats/accuracy_plot.png')

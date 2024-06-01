@@ -1,7 +1,7 @@
 {
     "test_groups": [
         {
-            "name": "full_graph",
+            "name": "Полные графы",
             "regen_factor": 1,
             "type": "usual",
             "parameters": [
@@ -28,7 +28,7 @@
             ]
         },
         {
-            "name": "sparse_graph",
+            "name": "Разреженные графы",
             "regen_factor": 5,
             "type": "usual",
             "parameters": [
@@ -55,7 +55,7 @@
             ]
         },
         {
-            "name": "incoherent_graph",
+            "name": "Несвязные графы",
             "regen_factor": 3,
             "type": "usual",
             "parameters": [
@@ -74,7 +74,7 @@
             ]
         },
         {
-            "name": "average_graph",
+            "name": "Произвольные графы",
             "regen_factor": 10,
             "type": "usual",
             "parameters": [
@@ -93,7 +93,7 @@
             ]
         },
         {
-            "name": "component_graph",
+            "name": "Компонентные графы",
             "regen_factor": 10,
             "type": "components",
             "parameters": [
