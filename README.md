@@ -2,9 +2,6 @@
 
 ### DESCRIPTION
 Iterative algorithm that finds MDST within one of the optimal degree.
-Link to the related paper: 
-
-```https://www.overleaf.com/read/jbmnfdgncstp#3327a5```
 
 ### PREREQUISITES
 - Python 3.7+
