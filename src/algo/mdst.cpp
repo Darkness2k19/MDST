@@ -1,7 +1,6 @@
 #include "mdst.hpp"
 
 #include <cstdlib>
-// #include <iostream>
 #include <optional>
 #include <queue>
 #include <unordered_map>
@@ -115,11 +114,6 @@ struct PhaseResult {
 };
 
 PhaseResult Phase(const Graph& g, Graph prev_iter, uint64_t max_degree) {
-  // std::cout << "Prev iter\n";
-  // for (Edge e : prev_iter.GetEdges()) {
-  //   std::cout << e.first << ' ' << e.second << '\n';
-  // }
-
   Graph iter = prev_iter;
   std::unordered_set<Vertex> forbidden;
   for (Vertex v : prev_iter.GetVertices()) {
@@ -129,22 +123,12 @@ PhaseResult Phase(const Graph& g, Graph prev_iter, uint64_t max_degree) {
     }
   }
 
-  // std::cout << "Forbidden\n";
-  // for (Vertex v : forbidden) {
-  //   std::cout << v << ' ';
-  // }
-  // std::cout << '\n';
-
   if (iter.GetVertices().size() == 0) {
     return {std::move(prev_iter), false, false};
   }
 
   // For quick partition identifying
   auto colors = MakeColoring(iter, forbidden, iter.GetVertices());
-  // std::cout << "Colors\n";
-  // for (auto p : colors) {
-  //   std::cout << p.first << ' ' << p.second << '\n';
-  // }
 
   std::optional<Edge> edge_storage;
 
@@ -276,11 +260,6 @@ Graph FindMDST(const Graph& g) {
   }
 
   Graph iter = GetAnyST(g);
-
-  // std::cout << "Init ST\n";
-  // for (Edge e : iter.GetEdges()) {
-  //   std::cout << e.first << ' ' << e.second << '\n';
-  // }
 
   Vertex max_degree_vertex = iter.GetVertexOfMaximumDegree();
   uint64_t max_degree = iter.GetDegree(max_degree_vertex);
